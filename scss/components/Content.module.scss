@@ -1,0 +1,40 @@
+@import "../utils";
+@import "../globals";
+
+.content {
+
+    @include breakpoints-up(large){
+        display: flex;
+    }
+
+  &__container {
+    &-image {
+      position: relative;
+      width: 100%;
+      height: toRem(227);
+
+      @include breakpoints-up(large){
+          width: toRem(1500);
+      }
+    }
+  }
+
+  &__section {
+    padding: 0 toRem(33);
+    line-height: toRem(20);
+    font-family: $spartan;
+    font-size: toRem(15);
+
+    h3 {
+      color: $black;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    p {
+      color: $dark-gray;
+      margin-bottom: toRem(62);
+    }
+  }
+}
+

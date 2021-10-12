@@ -1,0 +1,54 @@
+@import "../utils";
+@import "../globals";
+
+.nav {
+  padding-top: toRem(48);
+  padding-left: toRem(23);
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  
+  nav {
+    
+  }
+
+  &__toggle {
+    > span {
+      display: block;
+      width: toRem(20);
+      height: toRem(2);
+      background-color: white;
+
+      &:not(:last-child) {
+        margin-bottom: toRem(4);
+      }
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+
+    @include breakpoints-up(large){
+      // margin-right: toRem(55);
+    }
+  }
+
+  &__links{
+    &-desktop{
+      margin-left: toRem(55);
+
+
+      a{
+
+        text-decoration: none;
+        color: white;
+
+        &:not(:last-child){
+          margin-right: toRem(33);
+        }
+      }
+    }
+  }
+}

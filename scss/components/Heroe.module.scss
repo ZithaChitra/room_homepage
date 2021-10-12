@@ -1,0 +1,65 @@
+@import '../utils';
+@import '../globals';
+
+.heroe{
+    // width: 100%;
+    font: $spartan;
+    
+    // here
+    &__container{
+        &-image{
+            position: relative;
+            height: toRem(360);
+            width: 100%;
+            margin-bottom: toRem(72);
+            @include breakpoints-up(large){
+                position: relative;
+                width: toRem(3000);
+            }
+            
+            
+        }
+        
+        &-heroe{
+            @include breakpoints-up(large){
+                display: flex;
+            }
+        }
+    }
+    
+    // to here
+    
+    
+    &__section{
+        padding: 0 toRem(33);
+        color: $black;
+        margin-bottom: toRem(73);
+        @include breakpoints-up(large){
+            margin-bottom: 0;
+        }
+
+        h2{
+            font-size: toRem(24);
+            line-height: toRem(28);
+            margin-bottom: toRem(18);
+            font-weight: 700;
+        }
+
+        p{
+            font-size: toRem(15);
+            color: $dark-gray;
+            line-height: toRem(20);
+            margin-bottom: toRem(55);
+        }
+
+        a{
+            font-weight: 600;
+            word-spacing: toRem(20);
+            letter-spacing: toRem(11);
+            font-size: toRem(11);
+            color: $black;
+            text-decoration: none;
+        }
+    }
+
+}
